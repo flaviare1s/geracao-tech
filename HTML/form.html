@@ -6,8 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário</title>
   <style>
-    div {
+    div, fieldset {
       margin-bottom: 5px;
+    }
+
+    input {
+      border: none;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    button {
+      background-color: blue;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 80%;
     }
   </style>
 </head>
@@ -15,26 +35,26 @@
 <body>
   <h1>Formulário</h1>
   <form method="post">
-    <div>
-      <label for="nome">Nome:</label>
+    <fieldset>
+      <legend>Nome:</legend>
       <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
-    </div>
-    <div>
-      <label for="email">E-mail:</label>
+    </fieldset>
+    <fieldset>
+      <legend>E-mail:</legend>
       <input type="email" id="email" name="email" placeholder="Seu email" required>
-    </div>
-    <div>
-      <label for="senha">Senha:</label>
+    </fieldset>
+    <fieldset>
+      <legend>Senha:</legend>
       <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
-    </div>
-    <div>
-      <label for="idade">Idade:</label>
+    </fieldset>
+    <fieldset>
+      <legend>Idade:</legend>
       <input type="number" id="idade" name="idade" min="0" max="110">
-    </div>
-    <div>
-      <label for="nascimento">Data de Nascimento:</label>
+    </fieldset>
+    <fieldset>
+      <legend>Data de Nascimento:</legend>
       <input type="date" id="nascimento" name="nascimento" min="1950-01-01" max="2026-01-01">
-    </div>
+    </fieldset>
     <div>
       <!-- Elemento escondido (hidden) -->
       <input type="hidden" id="chave" name="chave" value="555dhxuangk8">
@@ -46,16 +66,16 @@
     <fieldset>
       <legend>Gênero</legend>
       <input type="radio" name="genero" id="feminino" value="feminino">
-      <label for="feminino">Feminino</label>
+      <legend>Feminino</legend>
 
       <input type="radio" name="genero" id="masculino" value="masculino">
-      <label for="masculino">Masculino</label>
+      <legend>Masculino</legend>
 
       <input type="radio" name="genero" id="outro" value="outro">
-      <label for="outro">Outro</label>
+      <legend for="outro">Outro</legend>
     </fieldset>
-    <div>
-      <label for="regiao"></label>
+    <fieldset>
+      <legend>Região</legend>
       <select name="regiao" id="regiao">
         <option value="">Escolha uma Região</option>
         <option value="Nordeste">Nordeste</option>
@@ -64,7 +84,7 @@
         <option value="Sul">Sul</option>
         <option value="Centro-Oeste">Centro-Oeste</option>
       </select>
-    </div>
+    </fieldset>
     <div>
       <button>Enviar</button>
     </div>
