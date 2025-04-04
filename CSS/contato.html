@@ -5,26 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produtos</title>
-  <!-- CSS Interno -->
-  <style>
-    h1 {
-      text-align: center;
-      color: blueviolet;
-    }
-
-    ul {
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-    }
-
-    input, textarea {
-        border: none;
-        width: 100%;
-    }
-
-  </style>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -68,14 +49,20 @@
     </div>
     <fieldset>
       <legend>Gênero</legend>
-      <input type="radio" name="genero" id="feminino" value="feminino">
-      <legend>Feminino</legend>
+      <div class="genero">
+          <input type="radio" name="genero" id="feminino" value="feminino">
+          <legend>Feminino</legend>
+      </div>
 
-      <input type="radio" name="genero" id="masculino" value="masculino">
-      <legend>Masculino</legend>
+      <div class="genero">
+          <input type="radio" name="genero" id="masculino" value="masculino">
+          <legend>Masculino</legend>
+      </div>
 
-      <input type="radio" name="genero" id="outro" value="outro">
-      <legend for="outro">Outro</legend>
+      <div class="genero">
+          <input type="radio" name="genero" id="outro" value="outro">
+          <legend for="outro">Outro</legend>
+      </div>
     </fieldset>
     <fieldset>
       <legend>Região</legend>

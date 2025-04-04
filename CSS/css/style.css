@@ -1,0 +1,40 @@
+body {
+  background-color: #f3f3f3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: blueviolet;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 50%;
+  text-decoration: underline;
+}
+
+input, textarea {
+  border: none;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+input[type=checkbox], input[type=radio] {
+  width: auto;
+  accent-color: blueviolet;
+}
+
+.genero {
+  display: flex;
+}
