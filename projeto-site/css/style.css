@@ -74,11 +74,12 @@ form {
 input, textarea {
   border: none;
   width: 100%;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 fieldset {
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -88,6 +89,15 @@ input[type=checkbox], input[type=radio] {
 
 .genero {
   display: flex;
+}
+
+input::placeholder {
+  color: transparent;
+  transition: 0.3s;
+}
+
+input:hover::placeholder {
+  color: gray;
 }
 
 button {
