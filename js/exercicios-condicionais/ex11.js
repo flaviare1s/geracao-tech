@@ -5,7 +5,7 @@
 // 1 À vista em dinheiro ou cheque, recebe 10% de desconto
 // 2 À vista no cartão de crédito, recebe 15% de desconto
 // 3 Em duas vezes, preço normal de etiqueta sem juros
-// 4 Em duas vezes, preço normal de etiqueta mais juros de 10% 
+// 4 Em duas vezes, preço normal de etiqueta mais juros de 10%
 const prompt = require("prompt-sync")();
 
 let preco = Number(prompt("Digite o preço do produto: "));
@@ -24,7 +24,8 @@ switch (codigo) {
   case 2:
     total = preco * 0.85;
     console.log(
-      "À vista no cartão de crédito. Total com 15% de desconto: R$ " + total.toFixed(2)
+      "À vista no cartão de crédito. Total com 15% de desconto: R$ " +
+        total.toFixed(2)
     );
     break;
 
@@ -36,7 +37,8 @@ switch (codigo) {
   case 4:
     total = preco * 1.1;
     console.log(
-      "Em duas vezes com juros. Total com acréscimo de 10% de juros: R$ " + total.toFixed(2)
+      "Em duas vezes com juros. Total com acréscimo de 10% de juros: R$ " +
+        total.toFixed(2)
     );
     break;
 
