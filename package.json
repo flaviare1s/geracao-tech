@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "geracao-tech": "file:",
     "prompt-sync": "^4.2.0"
   }
 }
