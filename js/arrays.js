@@ -33,25 +33,25 @@ frutas.pop();
 console.log(frutas);
 
 // Adicionando um elemento no INÍCIO do array:
-frutas.unshift('abacaxi')
-console.log(frutas)
+frutas.unshift("abacaxi");
+console.log(frutas);
 
 // Removendo um elemento no INÍCIO do array:
-frutas.shift()
-console.log(frutas)
+frutas.shift();
+console.log(frutas);
 
 // Splice adiciona ou remove elementos em um índice específico:
 // Para remover: coloca primeiro o index e depois a quantidade de elementos a ser removida:
-frutas.splice(0, 2)
-console.log(frutas)
+frutas.splice(0, 2);
+console.log(frutas);
 
 // Para adicionar: coloca primeiro o index, depois 0 e depois os elementos a serem adicionados:
-frutas.splice(1, 0, 'uva', 'morango', 'abacaxi', 'laranja')
-console.log(frutas)
+frutas.splice(1, 0, "uva", "morango", "abacaxi", "laranja");
+console.log(frutas);
 
 // Ordenar o array
-arrayOrdenado = frutas.sort()
-console.log(arrayOrdenado)
+arrayOrdenado = frutas.sort();
+console.log(arrayOrdenado);
 
 // Verificar se um elemento existe em um array:
-console.log(frutas.includes('maçã'))
+console.log(frutas.includes("maçã"));
