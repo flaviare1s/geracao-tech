@@ -10,7 +10,7 @@
 const prompt = require("prompt-sync")();
 
 let peso = Number(prompt("Digite o seu peso: "));
-let altura = Number(prompt("Digite a sua altura (em cm): "));
+let altura = Number(prompt("Digite a sua altura (em m): "));
 let IMC = (peso / altura ** 2).toFixed(2);
 
 if (IMC < 18.5) {
