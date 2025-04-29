@@ -18,7 +18,7 @@ if (IMC < 18.5) {
 } else if (IMC >= 18.5 && IMC < 25) {
   console.log(`Seu IMC é ${IMC} e você está com o peso normal.`);
 } else if (IMC >= 25 && IMC < 30) {
-  console.log(`Seu IMC é ${IMC} e você acima do peso.`);
+  console.log(`Seu IMC é ${IMC} e você está acima do peso.`);
 } else {
   console.log(`Seu IMC é ${IMC} e você está com obesidade.`);
 }
