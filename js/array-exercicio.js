@@ -23,16 +23,8 @@ const empresas = [
     CEO: "Mark Zuckerberg",
     anoDeCriacao: 2004,
   },
-  { nome: "Spotify",
-    valorDeMercado: 30,
-    CEO: "Daniel Ek",
-    anoDeCriacao: 2006
-  },
-  { nome: "Apple",
-    valorDeMercado: 845,
-    CEO: "Tim Cook",
-    anoDeCriacao: 1976
-  },
+  { nome: "Spotify", valorDeMercado: 30, CEO: "Daniel Ek", anoDeCriacao: 2006 },
+  { nome: "Apple", valorDeMercado: 845, CEO: "Tim Cook", anoDeCriacao: 1976 },
 ];
 
 // 1. Listar o nome de todas as empresas
@@ -66,9 +58,19 @@ console.log(valorTotal);
 // console.table(empresaMaisAntiga);
 
 const base = empresas.sort((a, b) => a.anoDeCriacao - b.anoDeCriacao);
-const maisAntiga = base[0]
-console.log(maisAntiga)
+const maisAntiga = base[0];
+console.log(maisAntiga);
 
 // 5. Criar um novo array com nome e CEO das empresas
 const nomesECEOs = empresas.map(({ nome, CEO }) => ({ nome, CEO }));
 console.table(nomesECEOs);
+
+// Fazendo com forEach e push:
+const nomeEmpresaCEO = [];
+empresas.forEach((empresa) => {
+  nomeEmpresaCEO.push({
+    nome: empresa.nome,
+    CEO: empresa.CEO,
+  });
+});
+console.log(nomeEmpresaCEO);
