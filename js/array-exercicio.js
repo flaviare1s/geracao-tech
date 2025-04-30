@@ -23,8 +23,16 @@ const empresas = [
     CEO: "Mark Zuckerberg",
     anoDeCriacao: 2004,
   },
-  { nome: "Spotify", valorDeMercado: 30, CEO: "Daniel Ek", anoDeCriacao: 2006 },
-  { nome: "Apple", valorDeMercado: 845, CEO: "Tim Cook", anoDeCriacao: 1976 },
+  { nome: "Spotify",
+    valorDeMercado: 30,
+    CEO: "Daniel Ek",
+    anoDeCriacao: 2006
+  },
+  { nome: "Apple",
+    valorDeMercado: 845,
+    CEO: "Tim Cook",
+    anoDeCriacao: 1976
+  },
 ];
 
 // 1. Listar o nome de todas as empresas
