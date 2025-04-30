@@ -52,17 +52,22 @@ const valorTotal = empresas.reduce((acc, empresa) => {
 console.log(valorTotal);
 
 // 4. Encontrar a empresa mais antiga
-let antigo = Infinity;
-const anoMaisAntigo = empresas.reduce((acc, empresa) => {
-  if (empresa.anoDeCriacao < antigo) {
-    antigo = empresa.anoDeCriacao;
-  }
-}, 0);
 
-const empresaMaisAntiga = empresas.filter(
-  (empresa) => empresa.anoDeCriacao == antigo
-);
-console.table(empresaMaisAntiga);
+// let antigo = Infinity;
+// const anoMaisAntigo = empresas.reduce((acc, empresa) => {
+//   if (empresa.anoDeCriacao < antigo) {
+//     antigo = empresa.anoDeCriacao;
+//   }
+// }, 0);
+
+// const empresaMaisAntiga = empresas.filter(
+//   (empresa) => empresa.anoDeCriacao == antigo
+// );
+// console.table(empresaMaisAntiga);
+
+const base = empresas.sort((a, b) => a.anoDeCriacao - b.anoDeCriacao);
+const maisAntiga = base[0]
+console.log(maisAntiga)
 
 // 5. Criar um novo array com nome e CEO das empresas
 const nomesECEOs = empresas.map(({ nome, CEO }) => ({ nome, CEO }));
