@@ -1,7 +1,6 @@
 export function aplicarDesconto(valor) {
   if (valor > 200) {
     return valor * 0.8;
-  } else {
-    return valor;
   }
+    return valor;
 }

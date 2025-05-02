@@ -21,11 +21,9 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  const totalComTaxa = calcularTotal(produtos, (preco) => preco * 1.1).toFixed(
-    2
-  );
+  const totalComTaxa = calcularTotal(produtos, (preco) => preco * 1.1);
 
-  logger(`Valor com taxa: ${totalComTaxa}`);
+  logger(`Valor com taxa: ${totalComTaxa.toFixed(2)}`);
 
   const totalFinal = aplicarDesconto(totalComTaxa);
 
@@ -33,7 +31,6 @@ form.addEventListener("submit", (e) => {
 
   const resultado = document.getElementById("resultado");
   resultado.classList.remove("d-none");
-  resultado.classList.add("d-block");
   resultado.innerHTML = `Valor total com descontos e taxa: R$${totalFinal.toFixed(2).replace('.', ',')}`;
 });
 
