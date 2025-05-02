@@ -1,5 +1,8 @@
+import { calcularTotal } from "./utils/calculator.js";
+import { aplicarDesconto } from "./utils/discount.js";
+import { logger } from "./utils/logger.js";
+
 const form = document.getElementById("pedidoForm");
-const resultado = document.getElementById("resultado");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -13,12 +16,25 @@ form.addEventListener("submit", (e) => {
     preco: Number(input.value),
   }));
 
-  console.log(produtos);
-
   if (produtos.length === 0) {
     alert("Selecione pelo menos um produtos!");
     return;
   }
+
+  const totalComTaxa = calcularTotal(produtos, (preco) => preco * 1.1).toFixed(
+    2
+  );
+
+  logger(`Valor com taxa: ${totalComTaxa}`);
+
+  const totalFinal = aplicarDesconto(totalComTaxa);
+
+  logger(`Valor com desconto e taxa: ${totalFinal.toFixed(2)}`);
+
+  const resultado = document.getElementById("resultado");
+  resultado.classList.remove("d-none");
+  resultado.classList.add("d-block");
+  resultado.innerHTML = `Valor total com descontos e taxa: R$${totalFinal.toFixed(2).replace('.', ',')}`;
 });
 
 // Outra forma de fazer, sem ser com spread:
